@@ -1,13 +1,13 @@
 package ma.master.security_demo.security.rest.controller;
 
-import ma.master.ai_quizs.security.beans.User;
-import ma.master.ai_quizs.security.exceptions.UserAlreadyExistsException;
-import ma.master.ai_quizs.security.jwt.JwtUtils;
-import ma.master.ai_quizs.security.rest.dto.request.LoginRequest;
-import ma.master.ai_quizs.security.rest.dto.request.SignupRequest;
-import ma.master.ai_quizs.security.rest.dto.response.JwtResponse;
-import ma.master.ai_quizs.security.rest.dto.response.MessageResponse;
-import ma.master.ai_quizs.security.service.facade.UserService;
+import ma.master.security_demo.security.beans.User;
+import ma.master.security_demo.security.exceptions.UserAlreadyExistsException;
+import ma.master.security_demo.security.jwt.JwtUtils;
+import ma.master.security_demo.security.rest.dto.request.LoginRequest;
+import ma.master.security_demo.security.rest.dto.request.SignupRequest;
+import ma.master.security_demo.security.rest.dto.response.JwtResponse;
+import ma.master.security_demo.security.rest.dto.response.MessageResponse;
+import ma.master.security_demo.security.service.facade.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -43,7 +43,7 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest){
 
         Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
+                new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);

@@ -2,10 +2,10 @@ package ma.master.security_demo.security.config;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import ma.master.ai_quizs.security.jwt.AuthEntryPointJwt;
-import ma.master.ai_quizs.security.jwt.AuthTokenFilter;
-import ma.master.ai_quizs.security.jwt.JwtUtils;
-import ma.master.ai_quizs.security.service.facade.UserService;
+import ma.master.security_demo.security.jwt.AuthEntryPointJwt;
+import ma.master.security_demo.security.jwt.AuthTokenFilter;
+import ma.master.security_demo.security.jwt.JwtUtils;
+import ma.master.security_demo.security.service.facade.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

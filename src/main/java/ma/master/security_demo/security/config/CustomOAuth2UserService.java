@@ -1,12 +1,12 @@
 package ma.master.security_demo.security.config;
 
-import ma.master.ai_quizs.security.beans.AuthProvider;
-import ma.master.ai_quizs.security.beans.CustomOAuth2User;
-import ma.master.ai_quizs.security.beans.Role;
-import ma.master.ai_quizs.security.beans.User;
-import ma.master.ai_quizs.security.dao.RoleDao;
-import ma.master.ai_quizs.security.dao.UserDao;
-import ma.master.ai_quizs.security.exceptions.OAuth2AuthenticationProcessingException;
+import ma.master.security_demo.security.beans.AuthProvider;
+import ma.master.security_demo.security.beans.CustomOAuth2User;
+import ma.master.security_demo.security.beans.Role;
+import ma.master.security_demo.security.beans.User;
+import ma.master.security_demo.security.dao.RoleDao;
+import ma.master.security_demo.security.dao.UserDao;
+import ma.master.security_demo.security.exceptions.OAuth2AuthenticationProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;

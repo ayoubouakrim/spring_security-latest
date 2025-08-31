@@ -1,6 +1,6 @@
 package ma.master.security_demo.security.dao;
 
-import ma.master.ai_quizs.security.beans.Role;
+import ma.master.security_demo.security.beans.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

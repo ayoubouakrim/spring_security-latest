@@ -2,7 +2,7 @@ package ma.master.security_demo.security.rest.dto.response;
 
 import java.util.List;
 
-@SuppressWarnings("LombokSetterMayBeUsed")
+
 public class JwtResponse {
     private Long id;
     private String token;

@@ -8,8 +8,6 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "roles")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -38,5 +36,21 @@ public class Role implements GrantedAuthority {
     @Override
     public int hashCode() {
         return Objects.hash(name);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

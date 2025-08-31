@@ -9,8 +9,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CustomOAuth2User implements OAuth2User {
-    private Map<String, Object> attributes;
-    private User user;
+     private Map<String, Object> attributes;
+     private User user;
 
     public CustomOAuth2User(Map<String, Object> attributes, User user) {
         this.attributes = attributes;

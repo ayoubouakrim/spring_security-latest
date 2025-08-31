@@ -1,12 +1,12 @@
 package ma.master.security_demo.security.service.impl;
 
-import ma.master.ai_quizs.security.beans.Role;
-import ma.master.ai_quizs.security.beans.User;
-import ma.master.ai_quizs.security.dao.RoleDao;
-import ma.master.ai_quizs.security.dao.UserDao;
-import ma.master.ai_quizs.security.exceptions.UserAlreadyExistsException;
-import ma.master.ai_quizs.security.rest.dto.request.SignupRequest;
-import ma.master.ai_quizs.security.service.facade.UserService;
+import ma.master.security_demo.security.beans.Role;
+import ma.master.security_demo.security.beans.User;
+import ma.master.security_demo.security.dao.RoleDao;
+import ma.master.security_demo.security.dao.UserDao;
+import ma.master.security_demo.security.exceptions.UserAlreadyExistsException;
+import ma.master.security_demo.security.rest.dto.request.SignupRequest;
+import ma.master.security_demo.security.service.facade.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.userdetails.UserDetails;
