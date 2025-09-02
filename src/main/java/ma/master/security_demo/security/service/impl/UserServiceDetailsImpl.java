@@ -45,7 +45,7 @@ public class UserServiceDetailsImpl implements UserService {
         if (username == null) {
             throw new UsernameNotFoundException("User not found");
         } else {
-            User user = userDao.findByUsername(username);
+            User user = userDao.findByEmail(username); // Use findByEmail instead
             if (user == null) {
                 throw new UsernameNotFoundException("User not found");
             }
@@ -87,6 +87,8 @@ public class UserServiceDetailsImpl implements UserService {
 
         // Create new user
         User user = new User();
+        user.setFirstName(signUpRequest.getFirstName());
+        user.setLastName(signUpRequest.getLastName());
         user.setUsername(signUpRequest.getUsername());
         user.setEmail(signUpRequest.getEmail());
         user.setPassword(bCryptPasswordEncoder.encode(signUpRequest.getPassword()));

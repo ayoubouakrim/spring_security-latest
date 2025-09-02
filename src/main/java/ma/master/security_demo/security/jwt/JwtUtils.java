@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -34,6 +35,11 @@ public class JwtUtils {
     public String generateJwtToken(Authentication authentication) {
         UserDetails userPrincipal = (UserDetails) authentication.getPrincipal();
         return generateTokenFromUsername(userPrincipal.getUsername(), userPrincipal.getAuthorities());
+    }
+
+    public String generateJwtTokenForOauth2(Authentication authentication) {
+        OAuth2User userPrincipal = (OAuth2User) authentication.getPrincipal();
+        return generateTokenFromUsername(userPrincipal.getName(), userPrincipal.getAuthorities());
     }
 
     /**

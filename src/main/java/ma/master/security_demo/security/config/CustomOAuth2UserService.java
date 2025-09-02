@@ -54,6 +54,8 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     private User createNewUser(String email, String name, String providerId, String registrationId) {
         User user = new User();
         user.setEmail(email);
+        user.setFirstName(name != null ? name : email);
+        user.setLastName(name != null ? name : email);
         user.setUsername(name != null ? name : email);
         user.setProvider(AuthProvider.valueOf(registrationId.toUpperCase()));
         user.setProviderId(providerId);
@@ -73,4 +75,3 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         return userDao.save(existingUser);
     }
 }
-

@@ -74,7 +74,7 @@ public class WebSecurityConfig {
     private void onAuthenticationSuccess(HttpServletRequest request,
                                          HttpServletResponse response,
                                          Authentication authentication) throws IOException {
-        String token = jwtUtils.generateJwtToken(authentication);
+        String token = jwtUtils.generateJwtTokenForOauth2(authentication);
         response.sendRedirect("http://localhost:3000/oauth2/redirect?token=" + token);
     }
 
